@@ -26,6 +26,8 @@ from approxeng.input.wii import WiiRemotePro
 from approxeng.input.wiimote import WiiMote
 # noinspection PyUnresolvedReferences
 from approxeng.input.xboxone import WiredXBoxOneSPad, WirelessXBoxOneSPad
+# noinspection PyUnresolvedReferences
+from approxeng.input.nejoystick import NEJoystick
 
 try:
     from evdev import InputDevice, list_devices, ecodes, util
