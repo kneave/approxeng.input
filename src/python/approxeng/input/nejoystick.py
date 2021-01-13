@@ -10,7 +10,7 @@ class NEJoystick(Controller):
     Driver for the Neave Engineering Joystick
     """
 
-    def __init__(self, dead_zone=0.05, hot_zone=0.005):
+    def __init__(self, dead_zone=0.1, hot_zone=0.1):
         """
         Axis and button definitions for my new controller class
 
@@ -30,13 +30,13 @@ class NEJoystick(Controller):
                 Button("TOG_DOWN", 290, sname='l1'),
                 Button("TOG_UP", 291, sname='r1'),
                 Button("ENCODER_BTN", 296, sname='select'),
-                CentredAxis("Left Horizontal", -32768, 32768, 0, sname='lx'),
-                CentredAxis("Left Vertical", -32768, 32768, 1, sname='ly'),
-                CentredAxis("Left Rotate", -32768, 32768, 2, sname='lt'),
-                CentredAxis("Right Horizontal", -32768, 32768, 3, sname='rx'),
-                CentredAxis("Right Vertical", -32768, 32768, 4, sname='ry'),
-                CentredAxis("Right Rotate", -32768, 32768, 5, sname='rt'),
-                CentredAxis("Encoder_Value", 0, 65535, 6, sname='ty')
+                CentredAxis("Left Horizontal", 0, 65535, 0, sname='lx'),
+                CentredAxis("Left Vertical", 0, 65535, 1, sname='ly'),
+                CentredAxis("Left Rotate", 0, 65535, 2, sname='lt'),
+                CentredAxis("Right Horizontal", 0, 65535, 3, sname='rx'),
+                CentredAxis("Right Vertical", 0, 65535, 4, sname='ry'),
+                CentredAxis("Right Rotate", 0, 65535, 5, sname='rt'),
+                CentredAxis("Encoder Value", 0, 65535, 6, sname='ty')
             ],
                 dead_zone=dead_zone,
                 hot_zone=hot_zone)
