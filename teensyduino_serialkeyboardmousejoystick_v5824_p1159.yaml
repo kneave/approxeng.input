@@ -1,0 +1,44 @@
+axes:
+  lt:
+    code: 2
+    invert: false
+    max_value: 65439
+    min_value: 0
+  lx:
+    code: 0
+    invert: false
+    max_value: 65535
+    min_value: 65
+  ly:
+    code: 1
+    invert: false
+    max_value: 65535
+    min_value: 65
+  rt:
+    code: 5
+    invert: false
+    max_value: 65535
+    min_value: 0
+  rx:
+    code: 3
+    invert: false
+    max_value: 65439
+    min_value: 185
+  ry:
+    code: 4
+    invert: false
+    max_value: 65535
+    min_value: 129
+buttons:
+  circle: 289
+  cross: 288
+  ddown: 290
+  dup: 291
+  ls: 294
+  rs: 295
+  select: 296
+  square: 292
+  triangle: 293
+name: Teensyduino Serial/Keyboard/Mouse/Joystick
+product: 1159
+vendor: 5824

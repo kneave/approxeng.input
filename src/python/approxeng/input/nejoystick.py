@@ -32,11 +32,11 @@ class NEJoystick(Controller):
                 Button("ENCODER_BTN", 296, sname='select'),
                 CentredAxis("Left Horizontal", 0, 65535, 0, sname='lx'),
                 CentredAxis("Left Vertical", 0, 65535, 1, sname='ly'),
-                CentredAxis("Left Rotate", 0, 65535, 2, sname='lt'),
+                CentredAxis("Left Rotate", 0, 65535, 2, sname='tx'),
                 CentredAxis("Right Horizontal", 0, 65535, 3, sname='rx'),
                 CentredAxis("Right Vertical", 0, 65535, 4, sname='ry'),
-                CentredAxis("Right Rotate", 0, 65535, 5, sname='rt'),
-                CentredAxis("Encoder Value", 0, 65535, 6, sname='ty')
+                CentredAxis("Right Rotate", 0, 65535, 5, sname='ty'),
+                CentredAxis("Encoder Value", 0, 65535, 6, sname='lt')
             ],
                 dead_zone=dead_zone,
                 hot_zone=hot_zone)

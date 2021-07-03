@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 from time import sleep
 
 from approxeng.input.controllers import find_matching_controllers, ControllerRequirement
@@ -20,12 +22,13 @@ try:
     # Get a stream of values for the left stick x and y axes. If we were using robot code from gpio.zero we could
     # set the controller.stream[...] as a source, as sources are just iterators which produce sequences of values
     discovery.controller
-    for lx, ly, lt, rx, ry, rt in discovery.controller.stream['lx', 'ly', 'lt', 'rx', 'ry', 'rt']:
-        print('lx={:,.2}, ly={:,.2}, lt={:,.2}, rx={:,.2}, ry={:,.2}, rt={:,.2}'.format(float(lx), float(ly), float(lt), float(rx), float(ry), float(rt)))
+    for lx, ly, tx, rx, ry, ty, lt in discovery.controller.stream['lx', 'ly', 'tx', 'rx', 'ry', 'ty', 'lt']:
+        print('lx={:,.2}, ly={:,.2}, lz={:,.2}, rx={:,.2}, ry={:,.2}, rz={:,.2}, enc={:,.2}'.format(float(lx), float(ly), float(tx), float(rx), float(ry), float(ty), float(lt)))
+
         sleep(0.1)
-except StopIteration:
+except(StopIteration):
     # Raised when the stream ends
-    pass
+   pass
 
 # Tidy up any resources (threads, file handles) used by the binder
 unbind_function()
